@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node-dev --inspect -- index.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,8 @@
     "express": "^4.17.1",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.42"
   }
 }
