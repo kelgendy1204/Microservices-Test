@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    node:
+        build: .
+        user: "currentuser"
+        working_dir: /home/currentuser/app
+        environment:
+            - NODE_ENV=development
+        volumes:
+            - ./:/home/currentuser/app
+        ports:
+            - "3001:3001"
+        command: >
+            bash -c "npm install && npm start"
