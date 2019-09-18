@@ -12,3 +12,13 @@ services:
             - "3001:3001"
         command: >
             bash -c "npm install && npm start"
+    messagebroker:
+        image: rabbitmq:3-management
+        hostname: rabbit
+        environment:
+            - RABBITMQ_DEFAULT_USER=user
+            - RABBITMQ_DEFAULT_PASS=password
+            - RABBITMQ_DEFAULT_VHOST=/
+        ports:
+            - "8080:15672"
+            - "5672:5672"
